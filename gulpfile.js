@@ -1,20 +1,53 @@
 const gulp = require('gulp');
+const prefix = require('gulp-autoprefixer');
+const sourcemaps = require('gulp-sourcemaps');
+const sass = require('gulp-sass');
 
-const css = require('./utils/css.js');
-const linting = require("./utils/lint.js");
-const packs = require('./utils/packs.js');
+/* ----------------------------------------- */
+/*  Compile Sass
+/* ----------------------------------------- */
 
+// Small error handler helper function.
+function handleError(err) {
+  console.log(err.toString());
+  this.emit('end');
+}
+
+const SYSTEM_SCSS = ["scss/**/*.scss"];
+function compileScss() {
+  // Configure options for sass output. For example, 'expanded' or 'nested'
+  let options = {
+    outputStyle: 'expanded'
+  };
+  return gulp.src(SYSTEM_SCSS)
+    .pipe(
+      sass(options)
+        .on('error', handleError)
+    )
+    .pipe(prefix({
+      cascade: false
+    }))
+    .pipe(gulp.dest("./css"))
+}
+const css = gulp.series(compileScss);
+
+/* ----------------------------------------- */
+/*  Watch Updates
+/* ----------------------------------------- */
+
+function watchUpdates() {
+  gulp.watch(SYSTEM_SCSS, css);
+}
+
+/* ----------------------------------------- */
+/*  Export Tasks
+/* ----------------------------------------- */
 
 exports.default = gulp.series(
-  gulp.parallel(css.compile),
-  css.watchUpdates
+  compileScss,
+  watchUpdates
 );
-exports.css = css.compile;
-exports.cleanPacks = gulp.series(packs.clean);
-exports.compilePacks = gulp.series(packs.compile);
-exports.extractPacks = gulp.series(packs.extract);
-exports.lint = gulp.series(linting.lint);
-exports.buildAll = gulp.parallel(
-  css.compile,
-  packs.compile
+exports.build = gulp.series(
+  compileScss
 );
+exports.css = css;
