@@ -1,22 +1,26 @@
 {
-  "JDRMOUNY.AbilityStr": "Strength",
+  "JDRMOUNY.AbilityStr": "Force",
   "JDRMOUNY.AbilityCon": "Constitution",
-  "JDRMOUNY.AbilityDex": "Dexterity",
-  "JDRMOUNY.AbilityInt": "Intelligence",
-  "JDRMOUNY.AbilityWis": "Wisdom",
-  "JDRMOUNY.AbilityCha": "Charisma",
+  "JDRMOUNY.AbilityDex": "Dextérité",
+  "JDRMOUNY.AbilityArc": "Arcane",
+  "JDRMOUNY.AbilityCha": "Charisme",
+  "JDRMOUNY.AbilityEsq": "Esquive",
+  "JDRMOUNY.AbilityPar": "Parade",
+  "JDRMOUNY.AbilityEru": "Erudition",
 
-  "JDRMOUNY.AbilityStrAbbr": "str",
-  "JDRMOUNY.AbilityConAbbr": "con",
+  "JDRMOUNY.AbilityConAbbr": "const",
+  "JDRMOUNY.AbilityStrAbbr": "for",
   "JDRMOUNY.AbilityDexAbbr": "dex",
-  "JDRMOUNY.AbilityIntAbbr": "int",
-  "JDRMOUNY.AbilityWisAbbr": "wis",
-  "JDRMOUNY.AbilityChaAbbr": "cha",
+  "JDRMOUNY.AbilityArcAbbr": "arc",
+  "JDRMOUNY.AbilityChAbbra": "cha",
+  "JDRMOUNY.AbilityEsqAbbr": "esq",
+  "JDRMOUNY.AbilityParAbbr": "pard",
+  "JDRMOUNY.AbilityEruAbbr": "eru",
 
-  "JDRMOUNY.EffectCreate": "Create Effect",
-  "JDRMOUNY.EffectToggle": "Toggle Effect",
-  "JDRMOUNY.EffectEdit": "Edit Effect",
-  "JDRMOUNY.EffectDelete": "Delete Effect",
+  "JDRMOUNY.EffectCreate": "Créer un effect",
+  "JDRMOUNY.EffectToggle": "Basculer d'effect",
+  "JDRMOUNY.EffectEdit": "Editer un effet",
+  "JDRMOUNY.EffectDelete": "Supprimer un effet",
 
-  "JDRMOUNY.Add": "Add"
+  "JDRMOUNY.Add": "Ajouter"
 }

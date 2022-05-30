@@ -1,0 +1,26 @@
+{
+  "JDRMOUNY.AbilityStr": "Force",
+  "JDRMOUNY.AbilityCon": "Constitution",
+  "JDRMOUNY.AbilityDex": "Dextérité",
+  "JDRMOUNY.AbilityArc": "Arcane",
+  "JDRMOUNY.AbilityCha": "Charisme",
+  "JDRMOUNY.AbilityEsq": "Esquive",
+  "JDRMOUNY.AbilityPar": "Parade",
+  "JDRMOUNY.AbilityEru": "Erudition",
+
+  "JDRMOUNY.AbilityConAbbr": "const",
+  "JDRMOUNY.AbilityStrAbbr": "for",
+  "JDRMOUNY.AbilityDexAbbr": "dex",
+  "JDRMOUNY.AbilityArcAbbr": "arc",
+  "JDRMOUNY.AbilityChAbbra": "cha",
+  "JDRMOUNY.AbilityEsqAbbr": "esq",
+  "JDRMOUNY.AbilityParAbbr": "pard",
+  "JDRMOUNY.AbilityEruAbbr": "eru",
+
+  "JDRMOUNY.EffectCreate": "Créer un effect",
+  "JDRMOUNY.EffectToggle": "Basculer d'effect",
+  "JDRMOUNY.EffectEdit": "Editer un effet",
+  "JDRMOUNY.EffectDelete": "Supprimer un effet",
+
+  "JDRMOUNY.Add": "Ajouter"
+}

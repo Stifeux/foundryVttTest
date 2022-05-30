@@ -14,16 +14,20 @@ JDRMOUNY.foobar = {
   "str": "JDRMOUNY.AbilityStr",
   "dex": "JDRMOUNY.AbilityDex",
   "con": "JDRMOUNY.AbilityCon",
-  "int": "JDRMOUNY.AbilityInt",
-  "wis": "JDRMOUNY.AbilityWis",
-  "cha": "JDRMOUNY.AbilityCha"
+  "cha": "JDRMOUNY.AbilityCha",
+  "arc": "JDRMOUNY.AbilityArc",
+  "esq": "JDRMOUNY.AbilityEsq",
+  "par": "JDRMOUNY.AbilityPar",
+  "eru": "JDRMOUNY.AbilityEru"
 };
 
 JDRMOUNY.abilityAbbreviations = {
   "str": "JDRMOUNY.AbilityStrAbbr",
   "dex": "JDRMOUNY.AbilityDexAbbr",
   "con": "JDRMOUNY.AbilityConAbbr",
-  "int": "JDRMOUNY.AbilityIntAbbr",
-  "wis": "JDRMOUNY.AbilityWisAbbr",
-  "cha": "JDRMOUNY.AbilityChaAbbr"
+  "cha": "JDRMOUNY.AbilityChaAbbr",
+  "arc": "JDRMOUNY.AbilityArcAbbr",
+  "esq": "JDRMOUNY.AbilityEsqAbbr",
+  "par": "JDRMOUNY.AbilityParAbbr",
+  "eru": "JDRMOUNY.AbilityEruAbbr"
 };
