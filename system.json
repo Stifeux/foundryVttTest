@@ -29,7 +29,5 @@
   "url": "https://github.com/Stifeux/foundryVttTest",
   "manifest": "https://raw.githubusercontent.com/Stifeux/foundryVttTest/master/system.json",
   "download": "https://github.com/Stifeux/foundryVttTest/archive/refs/heads/main.zip",
-  "manifest": "",
-  "download": "",
   "license": "LICENSE.txt"
 }
