@@ -18,7 +18,9 @@ JDRMOUNY.foobar = {
   "arc": "JDRMOUNY.AbilityArc",
   "esq": "JDRMOUNY.AbilityEsq",
   "par": "JDRMOUNY.AbilityPar",
-  "eru": "JDRMOUNY.AbilityEru"
+  "eru": "JDRMOUNY.AbilityEru",
+  "vit": "JDRMOUNY.AbilityVit",
+  "vitbm": "JDRMOUNY.AbilityVitbm",
 };
 
 JDRMOUNY.abilityAbbreviations = {
@@ -29,5 +31,7 @@ JDRMOUNY.abilityAbbreviations = {
   "arc": "JDRMOUNY.AbilityArcAbbr",
   "esq": "JDRMOUNY.AbilityEsqAbbr",
   "par": "JDRMOUNY.AbilityParAbbr",
-  "eru": "JDRMOUNY.AbilityEruAbbr"
+  "eru": "JDRMOUNY.AbilityEruAbbr",
+  "vit": "JDRMOUNY.AbilityVitAbbr",
+  "vitbm": "JDRMOUNY.AbilityVitbmAbbt",
 };

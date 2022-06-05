@@ -14,102 +14,225 @@
 
         {{!-- Owned Features Tab --}}
         <div class="tab features" data-group="primary" data-tab="features">
-
-            <section class="grid grid-2col" id="headerPersonnage">
-                <div id="infoPerso">
+            <section class="grid grid-2col" id="headerPersonnage" style="margin-bottom: -25px;">
+                <div id="infoPerso" style="padding-right: 25px;">
                     <div class="grid grid-3col">
-                        <input name="data.age.value" type="number" value="{{data.age.value}}" placeholder="Age" />
-                        <input name="data.taille.value" type="text" value="{{data.taille.value}}" placeholder="Taille" />
-                        <input name="data.sexe.value" type="text" value="{{data.sexe.value}}" placeholder="Taille" />
+                        <input name="data.age.value" class="underline" type="number" value="{{data.age.value}}" placeholder="Age" />
+                        <input name="data.taille.value" class="underline" type="text" value="{{data.taille.value}}" placeholder="Taille" />
+                        <input name="data.sexe.value" class="underline" type="text" value="{{data.sexe.value}}" placeholder="Sexe" />
                     </div>
                     <div class="grid grid-2col">
-                        <input name="data.race.value" type="text" value="{{data.race.value}}" placeholder="Race" />
-                        <input name="data.poids.value" type="text" value="{{data.poids.value}}" placeholder="Poids" />
+                        <input name="data.race.value" class="underline" type="text" value="{{data.race.value}}" placeholder="Race" />
+                        <input name="data.poids.value" class="underline" type="text" value="{{data.poids.value}}" placeholder="Poids" />
                     </div>
                     <div class="grid">
-                        <input name="name" type="text" value="{{actor.name}}" placeholder="Nom" />
-                        <input name="data.langue.value" type="text" value="{{data.langue.value}}" placeholder="Langue" />
+                        <input name="name" type="text" class="underline" value="{{actor.name}}" placeholder="Nom" />
+                        <input name="data.langue.value" class="underline" type="text" value="{{data.langue.value}}" placeholder="Langue" />
                     </div>
                 </div>
-                <div id="capaciteRaciale">
-                    <textarea name="data.capaciteRaciale.value" value="{{data.capaciteRaciale.value}}" cols="30" rows="10" placeholder="Capacité raciale"></textarea>
-                </div>
-            </section>
-
-            <section class="grid grid-2col">
-                <div class="grid grid-3col">
-                    
-                </div>
-                <div class="grid grid-2col">
-                </div>
-                {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-                use both the "grid" and "grid-Ncol" class where "N" can be any number
-                from 1 to 12 and will create that number of columns. --}}
-            </section>
-            <section class="grid grid-3col">
-                <div class="resources grid grid-3col">
-
-                    {{!-- "flex-group-center" is also defined in the _grid.scss file
-                    and it will add a small amount of padding, a border, and will
-                    center all of its child elements content and text. --}}
-                    <div class="resource flex-group-center">
-                        <label for="data.health.value" class="resource-label">Health</label>
-                        <div class="resource-content flexrow flex-center flex-between">
-                            <input type="text" name="data.health.value" value="{{data.health.value}}" data-dtype="Number" />
-                            <span> / </span>
-                            <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number" />
-                        </div>
-                    </div>
-
-                    <div class="resource flex-group-center">
-                        <label for="data.power.value" class="resource-label">Power</label>
-                        <div class="resource-content flexrow flex-center flex-between">
-                            <input type="text" name="data.power.value" value="{{data.power.value}}" data-dtype="Number" />
-                            <span> / </span>
-                            <input type="text" name="data.power.max" value="{{data.power.max}}" data-dtype="Number" />
-                        </div>
-                    </div>
-
-                    <div class="resource flex-group-center">
-                        <label for="data.attributes.level.value" class="resource-label">Level</label>
-                        <div class="resource-content flexrow flex-center flex-between">
-                            <input type="text" name="data.attributes.level.value" value="{{data.attributes.level.value}}"
-                                data-dtype="Number" />
-                        </div>
-                    </div>
-
+                <div style="margin-left:25px; margin-top:10px">
+                    <textarea name="data.capaciteRaciale.value" cols="30" rows="4" placeholder="Capacité raciale">{{data.capaciteRaciale.value}}</textarea>
                 </div>
             </section>
-            <section class="grid grid-3col">
-                <aside class="sidebar">
-
-                    {{!-- The grid classes are defined in scss/global/_grid.scss. To use,
-                    use both the "grid" and "grid-Ncol" class where "N" can be any number
-                    from 1 to 12 and will create that number of columns. --}}
-                    <div class="abilities flexcol">
-                        {{#each data.abilities as |ability key|}}
-                        <div class="ability flexrow flex-group-center">
-                            <label for="data.abilities.{{key}}.value"
-                                class="resource-label rollable flexlarge align-left"
-                                data-roll="d20+@abilities.{{key}}.mod"
-                                data-label="{{ability.label}}">{{ability.label}}</label>
-                            <input type="text" name="data.abilities.{{key}}.value" value="{{ability.value}}"
-                                data-dtype="Number" />
-                            <span class="ability-mod rollable" data-roll="d20+@abilities.{{key}}.mod"
-                                data-label="{{ability.label}}">{{numberFormat ability.mod decimals=0 sign=true}}</span>
-                        </div>
-                        {{/each}}
+            
+            <div class="grid grid-7col" style="margin-bottom: -10px;">
+                <div style="grid-column: 5;">
+                    <img src="/systems/jdrMouny/assets/img/vitesse.png">
+                </div>
+                <div class="vitesseDiv" style="align-self: center;background-color: #553210;">
+                    <input type="text" class="underline" name="data.abilities.vit.value" value="{{data.abilities.vit.value}}">
+                    <div>
+                        mètres
                     </div>
-                </aside>
+                </div>
+                <div class="etoile">
+                    <input type="text" class="underline" name="data.abilities.vit.bonusMalus" value="{{data.abilities.vit.bonusMalus}}">
+                </div>
+            </div>
 
-                {{!-- For the main features list, span the right two columns --}}
-                <section class="main grid-span-2">
-                    {{!-- This is a Handlebars partial. They're stored in the `/parts` folder next to this sheet, and
-                    defined in module/helpers/templates.mjs --}}
-                    {{> "systems/jdrMouny/templates/actor/parts/actor-features.html"}}
-                </section>
+            <div class="grid grid-9col" style="text-align: center;height: 5em;margin-top: -22px;">
+                <div class="encadrement" style="grid-column: 4;">
+                    <label for="{{data.abilities.str.label}}"
+                        class="resource-label rollable flexlarge"
+                        {{!-- data-roll="d20+@abilities.str.mod" --}}
+                        data-roll="d20"
+                        data-label="{{data.abilities.str.label}}">{{data.abilities.str.label}}</label>
+                    <input type="text" maxlength="2" id="{{data.abilities.str.label}}" name="data.abilities.str.value" value="{{data.abilities.str.value}}">
+                </div>
+                <div class="encadrement" style="grid-column: 6;">
+                    <label for="{{data.abilities.dex.label}}"
+                        class="resource-label rollable flexlarge"
+                        data-roll="d20"
+                        {{!-- data-roll="d20+@abilities.dex.mod" --}}
+                        data-label="{{data.abilities.dex.label}}">{{data.abilities.dex.label}}</label>
+                    <input type="text" maxlength="2" id="{{data.abilities.dex.label}}" name="data.abilities.dex.value" value="{{data.abilities.dex.value}}">
+                </div>
+            </div>
 
-            </section>
+            <div class="grid grid-9col" style="text-align: center;height: 6em;">
+                <div class="encadrement" style="grid-column: 3;">
+                    <label for="{{data.abilities.con.label}}"
+                        class="resource-label rollable flexlarge"
+                        data-roll="d20"
+                        {{!-- data-roll="d20+@abilities.con.mod" --}}
+                        data-label="{{data.abilities.con.label}}">{{data.abilities.con.label}}</label>
+                    <input type="text" maxlength="2" id="{{data.abilities.con.label}}" name="data.abilities.con.value" value="{{data.abilities.con.value}}">
+                </div>
+                <div class="encadrement" style="grid-column: 7;">
+                    <label for="{{data.abilities.arc.label}}"
+                        class="resource-label rollable flexlarge"
+                        data-roll="d20"
+                        {{!-- data-roll="d20+@abilities.arc.mod" --}}
+                        data-label="{{data.abilities.arc.label}}">{{data.abilities.arc.label}}</label>
+                    <input type="text" maxlength="2" id="{{data.abilities.arc.label}}" name="data.abilities.arc.value" value="{{data.abilities.arc.value}}">
+                </div>
+            </div>
+
+
+            <div class="grid grid-5col" style="text-align: center;height: 3em;align-items: center; padding-top: 10px;">
+                <div class="resource-content flexrow flex-center flex-between healthInput">
+                    <input type="text" name="data.health.value" value="{{data.health.value}}" data-dtype="Number" />
+                    /
+                    <input type="text" name="data.health.max" value="{{data.health.max}}" data-dtype="Number" />
+                </div>
+                <div class="resource-content flexrow flex-center flex-between manaInput" style="grid-column: 5;">
+                    <input type="text" name="data.power.value" value="{{data.power.value}}" data-dtype="Number" />
+                    /
+                    <input type="text" name="data.power.max" value="{{data.power.max}}" data-dtype="Number" />
+                </div>
+            </div>
+
+
+            <div class="grid grid-9col" style="text-align: center;height: 5em;">
+                <div class="encadrement" style="grid-column: 3;">
+                    <label for="{{data.abilities.cha.label}}"
+                        class="resource-label rollable flexlarge"
+                        data-roll="d20"
+                        {{!-- data-roll="d20+@abilities.cha.mod" --}}
+                        data-label="{{data.abilities.cha.label}}">{{data.abilities.cha.label}}</label>
+                    <input type="text" maxlength="2" id="{{data.abilities.cha.label}}" name="data.abilities.cha.value" value="{{data.abilities.cha.value}}">
+                </div>
+                <div class="encadrement" style="grid-column: 7;">
+                    <label for="{{data.abilities.eru.label}}"
+                        class="resource-label rollable flexlarge"
+                        data-roll="d20"
+                        {{!-- data-roll="d20+@abilities.eru.mod" --}}
+                        data-label="{{data.abilities.eru.label}}">{{data.abilities.eru.label}}</label>
+                    <input type="text" maxlength="2" id="{{data.abilities.eru.label}}" name="data.abilities.eru.value" value="{{data.abilities.eru.value}}">
+                </div>
+            </div>
+
+            <div class="grid grid-9col" style="text-align: center;">
+                <div class="encadrement" style="grid-column: 4;">
+                    <label for="{{data.abilities.esq.label}}"
+                        class="resource-label rollable flexlarge"
+                        data-roll="d20"
+                        {{!-- data-roll="d20+@abilities.esq.mod" --}}
+                        data-label="{{data.abilities.esq.label}}">{{data.abilities.esq.label}}</label>
+                    <input type="text" maxlength="2" id="{{data.abilities.esq.label}}" name="data.abilities.esq.value" value="{{data.abilities.esq.value}}">
+                </div>
+
+                <div class="encadrementLvl" style="grid-column: 5;">
+                    <label for="data.attributes.level.value" class="resource-label">lvl</label>
+                    <input type="text" name="data.attributes.level.value" value="{{data.attributes.level.value}}" data-dtype="Number" />
+                </div>
+
+                <div class="encadrement" style="grid-column: 6; margin: 0px;">
+                    <label for="{{data.abilities.par.label}}"
+                        class="resource-label rollable flexlarge"
+                        data-roll="d20"
+                        {{!-- data-roll="d20+@abilities.par.mod" --}}
+                        data-label="{{data.abilities.par.label}}">{{data.abilities.par.label}}</label>
+                    <input type="text" maxlength="2" id="{{data.abilities.par.label}}" name="data.abilities.par.value" value="{{data.abilities.par.value}}">
+                </div>
+            </div>
+
+            <div class="grid grid-3col" style="margin: -15px;">
+                <div class="resource-content flexrow flex-center flex-between lvlInput" style="grid-column: 2;">
+                    <input type="text" style="width:5em;" name="data.attributes.experience.actuelle.value" value="{{data.attributes.experience.actuelle.value}}" data-dtype="Number" />
+                    /
+                    <input type="text" style="width:5em;" name="data.attributes.experience.max.value" value="{{data.attributes.experience.max.value}}" data-dtype="Number" />
+                </div>
+            </div>
+
+
+            <div class="grid grid-9col statPerso" style="margin-top: -80px;">
+                <div class="perforant">
+                    <input type="text" maxlength="2" name="data.avantage.perforant.value" value="{{data.avantage.perforant.value}}">
+                </div>
+                <div class="tranchant">
+                    <input type="text" maxlength="2" name="data.avantage.tranchant.value" value="{{data.avantage.tranchant.value}}">
+                </div>
+                <div class="contondant">
+                    <input type="text" maxlength="2" name="data.avantage.contondant.value" value="{{data.avantage.contondant.value}}">
+                </div>
+                
+                <div class="shieldContondant" style="grid-column: 7;">
+                    <input type="text" maxlength="2" name="data.resistance.contondant.value" value="{{data.resistance.contondant.value}}">
+                </div>
+                <div class="shieldTranchant">
+                    <input type="text" maxlength="2" name="data.resistance.tranchant.value" value="{{data.resistance.tranchant.value}}">
+                </div>
+                <div class="shieldPerforant">
+                    <input type="text" maxlength="2" name="data.resistance.perforant.value" value="{{data.resistance.perforant.value}}">
+                </div>
+            </div>
+
+            <div class="grid grid-9col statPerso">
+                <div class="feu">
+                    <input type="text" maxlength="2" name="data.avantage.feu.value" value="{{data.avantage.feu.value}}">
+                </div>
+                <div class="eau">
+                    <input type="text" maxlength="2" name="data.avantage.eau.value" value="{{data.avantage.eau.value}}">
+                </div>
+                <div class="nature">
+                    <input type="text" maxlength="2" name="data.avantage.nature.value" value="{{data.avantage.nature.value}}">
+                </div>
+                <div class="air">
+                    <input type="text" maxlength="2" name="data.avantage.air.value" value="{{data.avantage.air.value}}">
+                </div>
+                
+                <div class="shieldAir" style="grid-column: 6;">
+                    <input type="text" maxlength="2" name="data.resistance.air.value" value="{{data.resistance.air.value}}">
+                </div>
+                <div class="shieldNature">
+                    <input type="text" maxlength="2" name="data.resistance.nature.value" value="{{data.resistance.nature.value}}">
+                </div>
+                <div class="shieldEau">
+                    <input type="text" maxlength="2" name="data.resistance.eau.value" value="{{data.resistance.eau.value}}">
+                </div>
+                <div class="shieldFeu">
+                    <input type="text" maxlength="2" name="data.resistance.feu.value" value="{{data.resistance.feu.value}}">
+                </div>
+            </div>
+
+            <div class="grid grid-9col statPerso" style="margin-bottom: 0px;">
+                <div class="occulte">
+                    <input type="text" maxlength="2" name="data.avantage.occulte.value" value="{{data.avantage.occulte.value}}">
+                </div>
+                <div class="spirituel">
+                    <input type="text" maxlength="2" name="data.avantage.spirituel.value" value="{{data.avantage.spirituel.value}}">
+                </div>
+                <div class="lumiere">
+                    <input type="text" maxlength="2" name="data.avantage.lumiere.value" value="{{data.avantage.lumiere.value}}">
+                </div>
+                <div class="tenebre">
+                    <input type="text" maxlength="2" name="data.avantage.tenebre.value" value="{{data.avantage.tenebre.value}}">
+                </div>
+                
+                <div class="shieldTenebre" style="grid-column: 6;">
+                    <input type="text" maxlength="2" name="data.resistance.tenebre.value" value="{{data.resistance.tenebre.value}}">
+                </div>
+                <div class="shieldLumiere">
+                    <input type="text" maxlength="2" name="data.resistance.lumiere.value" value="{{data.resistance.lumiere.value}}">
+                </div>
+                <div class="shieldSpirituel">
+                    <input type="text" maxlength="2" name="data.resistance.spirituel.value" value="{{data.resistance.spirituel.value}}">
+                </div>
+                <div class="shieldOcculte">
+                    <input type="text" maxlength="2" name="data.resistance.occulte.value" value="{{data.resistance.occulte.value}}">
+                </div>
+            </div>
         </div>
 
         {{!-- Biography Tab --}}

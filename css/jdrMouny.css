@@ -278,14 +278,14 @@
 }
 
 .jdrMouny .sheet-tabs {
-    background-image: url("../assets/img/BANDEROLE.png");
+    background-image: url("../assets/img/banderole.png");
     -webkit-box-flex: 0;
     -ms-flex: 0;
     flex: 0;
 }
 
-.window-app,
-.window-app .window-content {
+.window-app.actor,
+.window-app.actor .window-content {
     max-width: 740px;
     max-height: 939px;
     min-height: 939px;
@@ -293,14 +293,18 @@
 }
 
 .sheet-body {
-    background-image: url("../assets/img/PAGE_PERSO_JDR_STATS_OFF.jpg") !important;
+    background-image: url("../assets/img/page_perso_jdr_stats_off.jpg");
     background-size: 100% !important;
     padding: 15px 34px 34px 34px;
     color: white;
 }
 
-input, select, textarea{
-    color: white !important;
+.actor img {
+    border: transparent;
+}
+
+.jdrMouny.sheet input, .jdrMouny.sheet select, .jdrMouny.sheet textarea{
+    color: white;
 }
 
 .jdrMouny .sheet-body,
@@ -604,4 +608,598 @@ fieldset:disabled .btn {
 .btn-outline-primary:disabled {
     color: #553210;
     background-color: transparent
+}
+
+.jdrMouny.sheet input::placeholder,
+.jdrMouny.sheet select::placeholder,
+.jdrMouny.sheet textarea::placeholder {
+    color: rgba(245, 245, 245, 0.671);
+}
+
+.encadrement
+{
+    background: url(../assets/img/fond_stats.png) round 11px 24px, url(../assets/img/encadrement_stats.png) round;
+    height: 100px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 49px, 73px;
+    background-repeat: no-repeat;
+}
+.encadrement input[type="text"]
+{
+    border:transparent;
+    width: 2em;
+    height: 2em;
+    padding-top: 0%
+}
+.encadrement label, .encadrement input{
+    display:flex;
+    flex-direction:column;
+    padding-top: 18px;
+}
+
+.encadrementLvl
+{
+    background: url("../assets/img/fond_stats.png") no-repeat round;
+    height: 80%;
+    background-position-x: -12px;
+    text-align: -webkit-center;
+    align-self: flex-end;
+    filter: drop-shadow(0 0 0.75rem yellow);
+}
+.encadrementLvl input[type="text"]
+{
+    border:transparent;
+    width: 2em;
+    height: 2em;
+    padding-top: 0%;
+}
+.encadrementLvl label, .encadrementLvl input{
+    display:flex;
+    flex-direction:column;
+    color: yellow !important;
+    padding-top: 22px;
+}
+
+.healthInput,
+.healthInput input {
+    color: orangered !important;
+    border-color: transparent;
+    align-items: center;
+    font-weight: bold;
+}
+
+.healthInput input:nth-child(1) {
+    text-align: right;
+}
+
+.healthInput input:nth-child(2) {
+    text-align: left;
+}
+
+.manaInput,
+.manaInput input {
+    color: #7e9fff !important;
+    border-color: transparent;
+    align-items: center;
+    font-weight: bold;
+}
+
+input.underline {
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid lightgrey;
+}
+
+.manaInput input:nth-child(1) {
+    text-align: right;
+}
+.manaInput input:nth-child(2) {
+    text-align: left;
+}
+
+.etoile
+{
+    background: url(../assets/img/etoile.png) no-repeat round;
+    height: 80px;
+    text-align: -webkit-center;
+}
+
+.etoile input
+{
+    margin: 27px 4px 18px 6px;
+    width: 49px;
+}
+
+.perforant
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/perforant.png) no-repeat round 4px -10px;
+    height: 75px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 53px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.perforant > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.air
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/air.png) no-repeat round 4px -17px;
+    height: 75px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 53px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.air > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.tranchant
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/tranchant.png) no-repeat round 4px -10px;
+    height: 75px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 53px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.tranchant > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.tenebre
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/tenebre.png) no-repeat round 4px -13px;
+    height: 75px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 65px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.tenebre > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.spirituel
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/spirituel.png) no-repeat round 15px -4px;
+    height: 75px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 42px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.spirituel > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.occulte
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/occulte.png) no-repeat round -2px -24px;
+    height: 75px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 78px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.occulte > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.nature
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/nature.png) no-repeat round 9px -23px;
+    height: 75px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 61px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.nature > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.lumiere
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/lumiere.png) no-repeat round 3px -11px;
+    height: 75px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 65px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.lumiere > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.feu
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/feu.png) no-repeat round 9px -17px;
+    height: 75px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 53px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.feu > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.eau
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/eau.png) no-repeat round 8px -20px;
+    height: 75px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 53px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.eau > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.contondant
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/contondant.png) no-repeat round 4px -10px;
+    height: 75px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 53px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.contondant > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.shieldPerforant
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/perforant.png) no-repeat round 4px -10px, url(../assets/img/shield.png) no-repeat round 0px -27px;
+    height: 75px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 53px, 70px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.shieldPerforant > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.shieldAir
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/air.png) no-repeat round 4px -17px, url(../assets/img/shield.png) no-repeat round 0px -27px;
+    height: 75px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 53px, 70px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.shieldAir > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.shieldTranchant
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/tranchant.png) no-repeat round 4px -4px, url(../assets/img/shield.png) no-repeat round 0px -27px;    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 53px, 70px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.shieldTranchant > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.shieldTenebre
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/tenebre.png) no-repeat round 2px -12px, url(../assets/img/shield.png) no-repeat round 0px -27px;
+    height: 75px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 64px, 70px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.shieldTenebre > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.shieldSpirituel
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/spirituel.png) no-repeat round 9px -5px, url(../assets/img/shield.png) no-repeat round 0px -27px;
+    height: 75px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 53px, 70px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.shieldSpirituel > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.shieldOcculte
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/occulte.png) no-repeat round -10px -24px, url(../assets/img/shield.png) no-repeat round 0px -27px;
+    height: 75px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 90px, 70px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.shieldOcculte > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.shieldNature
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/nature.png) no-repeat round 9px -17px, url(../assets/img/shield.png) no-repeat round 0px -27px;    height: 75px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 53px, 70px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.shieldNature > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.shieldLumiere
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/lumiere.png) no-repeat round 3px -11px, url(../assets/img/shield.png) no-repeat round 0px -27px;
+    height: 75px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 62px, 70px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.shieldLumiere > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.shieldFeu
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/feu.png) no-repeat round 9px -15px, url(../assets/img/shield.png) no-repeat round 0px -27px;
+    height: 75px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 53px, 70px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.shieldFeu > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.shieldEau
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/eau.png) no-repeat round 8px -18px, url(../assets/img/shield.png) no-repeat round 0px -27px;    height: 75px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 53px, 70px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.shieldEau > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.shieldContondant
+{
+    background: url(../assets/img/fond_stats.png) round 5px 24px, url(../assets/img/contondant.png) no-repeat round 12px -10px, url(../assets/img/shield.png) no-repeat round 0px -27px;
+    height: 75px;
+    width: 72px;
+    text-align: -webkit-center;
+    background-size: 61px, 53px, 70px;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    filter: drop-shadow(0 0 0.75rem black);
+}
+.shieldContondant > input
+{
+    margin-top: 40px;
+    width: 2em;
+    border: transparent;
+}
+
+.lvlInput,
+.lvlInput input {
+    color: yellow !important;
+    border-color: transparent;
+    align-items: center;
+    font-weight: bold;
+}
+
+.lvlInput input:nth-child(1) {
+    text-align: right;
+}
+.lvlInput input:nth-child(2) {
+    text-align: left;
+}
+
+.statPerso img {
+    border: transparent;
+    max-width: 40px;
+}
+
+.actor textarea {
+    resize: none;
+}
+
+.vitesseDiv {
+    display: inline-block;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    border-radius: .25rem;
+}
+
+.actor textarea {
+    background-image: -webkit-linear-gradient(left, transparent 10px, transparent 10px), -webkit-linear-gradient(right, transparent 10px, transparent 10px), -webkit-linear-gradient(transparent 30px, #ccc 30px, #ccc 31px, transparent 31px);
+    background-image: -moz-linear-gradient(left, transparent 10px, transparent 10px), -moz-linear-gradient(right, transparent 10px, transparent 10px), -moz-linear-gradient(transparent 30px, #ccc 30px, #ccc 31px, transparent 31px);
+    background-image: -ms-linear-gradient(left, transparent 10px, transparent 10px), -ms-linear-gradient(right, transparent 10px, transparent 10px), -ms-linear-gradient(transparent 30px, #ccc 30px, #ccc 31px, transparent 31px);
+    background-image: -o-linear-gradient(left, transparent 10px, transparent 10px), -o-linear-gradient(right, transparent 10px, transparent 10px), -o-linear-gradient(transparent 30px, #ccc 30px, #ccc 31px, transparent 31px);
+    background-image: linear-gradient(left, transparent 10px, transparent 10px), linear-gradient(right, transparent 10px, transparent 10px), linear-gradient(transparent 30px, #ccc 30px, #ccc 31px, transparent 31px);
+    background-size: 100% 100%, 100% 100%, 100% 31px;
+    border: transparent;
+    line-height: 31px;
+    font-family: Arial, Helvetica, Sans-serif;
+    padding: 8px;
+}
+
+.actor textarea:focus {
+    outline: none;
 }

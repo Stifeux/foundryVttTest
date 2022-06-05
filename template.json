@@ -47,9 +47,91 @@
             "attributes": {
                 "level": {
                     "value": 1
+                },
+                "experience": {
+                    "actuelle": {
+                        "value": 0
+                    },
+                    "max": {
+                        "value": 100
+                    }
+                }
+            },
+            "resistances" : {
+                "perforant" : {
+                    "value": 0
+                },
+                "air" : {
+                    "value": 0
+                },
+                "tranchant" : {
+                    "value": 0
+                },
+                "tenebre" : {
+                    "value": 0
+                },
+                "spirituel" : {
+                    "value": 0
+                },
+                "occulte" : {
+                    "value": 0
+                },
+                "nature" : {
+                    "value": 0
+                },
+                "lumiere" : {
+                    "value": 0
+                },
+                "feu" : {
+                    "value": 0
+                },
+                "eau" : {
+                    "value": 0
+                },
+                "contondant" : {
+                    "value": 0
+                }
+            },
+            "avantage" : {
+                "perforant" : {
+                    "value": 0
+                },
+                "air" : {
+                    "value": 0
+                },
+                "tranchant" : {
+                    "value": 0
+                },
+                "tenebre" : {
+                    "value": 0
+                },
+                "spirituel" : {
+                    "value": 0
+                },
+                "occulte" : {
+                    "value": 0
+                },
+                "nature" : {
+                    "value": 0
+                },
+                "lumiere" : {
+                    "value": 0
+                },
+                "feu" : {
+                    "value": 0
+                },
+                "eau" : {
+                    "value": 0
+                },
+                "contondant" : {
+                    "value": 0
                 }
             },
             "abilities": {
+                "vit": {
+                    "value": 2,
+                    "bonusMalus": 0
+                },
                 "str": {
                     "value": 10
                 },
